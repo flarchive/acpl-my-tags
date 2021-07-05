@@ -1,0 +1,23 @@
+<?php
+
+/*
+ * This file is part of android-com-pl/my-tags.
+ *
+ * Copyright (c) 2021 rafaucau.
+ *
+ * For the full copyright and license information, please view the LICENSE.md
+ * file that was distributed with this source code.
+ */
+
+namespace Acpl\MyTags;
+
+use Flarum\Api\Controller\ShowForumController;
+use Flarum\Extend;
+
+return [
+    (new Extend\Frontend('forum'))->js(__DIR__ . '/js/dist/forum.js')->css(__DIR__ . '/less/forum.less'),
+
+    new Extend\Locales(__DIR__ . '/locale'),
+
+    (new Extend\ApiController(ShowForumController::class))->prepareDataForSerialization(LoadForumTagsRelationship::class),
+];
