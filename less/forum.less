@@ -1,0 +1,33 @@
+.item-my-tags {
+  @media @tablet-up {
+    .Dropdown-separator {
+      background: none;
+    }
+  }
+}
+
+.MyTags {
+  p {
+    font-weight: 500;
+    color: @muted-color;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  @media @phone {
+    padding: 15px 25px;
+
+    p {
+      font-size: 16px;
+      color: @text-color;
+    }
+
+    .TagLabel {
+      font-size: 14px;
+    }
+  }
+}
