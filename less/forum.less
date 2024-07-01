@@ -1,0 +1,52 @@
+.item-my-tags {
+  @media @tablet-up {
+    .Dropdown-separator {
+      background: none;
+    }
+  }
+}
+
+.MyTags {
+  p {
+    color: @muted-color;
+    font-weight: 500;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  @media @phone {
+    padding: 15px 25px;
+
+    p {
+      color: @text-color;
+      font-size: 16px;
+    }
+
+    &__list {
+      gap: 10px;
+    }
+
+    .TagLabel {
+      font-size: 14px;
+    }
+  }
+}
+
+@media @desktop-up {
+  .TagsPage .sideNav .Dropdown-menu {
+    .MyTags {
+      padding-block: 8px;
+
+      &__label {
+        display: none;
+      }
+    }
+  }
+}
