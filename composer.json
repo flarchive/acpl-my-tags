@@ -1,0 +1,70 @@
+{
+    "name": "acpl/my-tags",
+    "description": "Displays a list of tags that the user is following in the sidebar.",
+    "keywords": [
+        "flarum",
+        "tags",
+        "sidebar",
+        "follow"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/android-com-pl/my-tags/issues",
+        "source": "https://github.com/android-com-pl/my-tags",
+        "forum": "https://discuss.flarum.org/d/28004-my-tags"
+    },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/android-com-pl/my-tags?sponsor=1"
+        }
+    ],
+    "authors": [
+        {
+            "name": "Rafał Całka",
+            "homepage": "https://github.com/rafaucau",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Acpl\\MyTags\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.2",
+        "flarum/core": "^2.0.0-beta",
+        "fof/follow-tags": "^2.0.0-beta"
+    },
+    "prefer-stable": true,
+    "minimum-stability": "beta",
+    "extra": {
+        "flarum-extension": {
+            "title": "My Tags",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-th-list",
+                "backgroundColor": "#0F9D58",
+                "color": "#fff"
+            }
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": true,
+                "forum": true,
+                "js": true,
+                "jsCommon": false,
+                "gitConf": true,
+                "githubActions": true,
+                "prettier": true,
+                "typescript": false,
+                "bundlewatch": false,
+                "backendTesting": false,
+                "editorConfig": true,
+                "styleci": true,
+                "css": true
+            }
+        }
+    }
+}
